@@ -1,0 +1,55 @@
+/*------ Settings ------*/
+.container {
+  position: absolute;
+  right: 1.5rem;
+  top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  fill: gold;
+  align-self: flex-end;
+}
+
+.container .star-regular {
+  position: absolute;
+  animation: keyframes-star 0.5s;
+}
+
+.container .star-solid {
+  position: absolute;
+  animation: keyframes-star 0.5s;
+  display: none;
+}
+
+/* ------ On check event ------ */
+.container input:checked ~ .star-regular {
+  display: none;
+}
+
+.container input:checked ~ .star-solid {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animations ------ */
+@keyframes keyframes-star {
+  0% {
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(10deg) scale(1.3);
+  }
+}

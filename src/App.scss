@@ -1,0 +1,25 @@
+.taskapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100dvh;
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(100dvh - 4rem);
+
+  @media (min-width: 599px) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    &__calenderView {
+      width: 100%;
+      min-width: 300px;
+      max-width: 550px;
+    }
+
+    &__impView {
+      width: 100%;
+      min-width: 300px;
+      max-width: 550px;
+    }
+  }
+}

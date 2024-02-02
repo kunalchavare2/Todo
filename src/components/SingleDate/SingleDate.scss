@@ -1,0 +1,28 @@
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #fff;
+  width: fit-content;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+
+  &.today {
+    background-color: #5f33e1;
+    color: #fff;
+  }
+
+  &__day {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  &__month,
+  &__weekDay {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,51 @@
+// -------------------FONT AND TEXT STYLING PROPERTIES
+@mixin font(
+  $font-family: sans-serif,
+  $font-color: #000,
+  $font-size: 16,
+  $font-weight: null,
+  $font-style: null
+) {
+  font-family: $font-family;
+  color: $font-color;
+  font-size: calc($font-size / 16) + rem;
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+@mixin text-properties-common(
+  $letter-spacing: null,
+  $line-height: 1,
+  $text-align: null
+) {
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  text-align: $text-align;
+}
+
+//-------------------- Responsive   FLEX, WIDTH , GRID
+@mixin flex-container(
+  $direction: row,
+  $justify-content: center,
+  $align-items: center,
+  $flex-wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin width-property($width: 100%, $min-width: null, $max-width: null) {
+  width: $width;
+  min-width: $min-width;
+  max-width: $max-width;
+}
+
+//----------------------- BORDER----------------------
+@mixin border-property($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}

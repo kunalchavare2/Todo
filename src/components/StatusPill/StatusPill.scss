@@ -1,0 +1,25 @@
+@import "../../styles/partials/variable";
+@import "../../styles/partials/mixins";
+
+.status {
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  &__done {
+    color: #5f33e1;
+    background-color: #ede8ff;
+  }
+
+  &__todo {
+    color: #007be5;
+    background-color: #e3f2ff;
+  }
+
+  &__inprogress {
+    color: #FF926F;
+    background-color: #ffe9e1;
+  }
+}

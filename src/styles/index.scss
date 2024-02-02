@@ -1,0 +1,10 @@
+@import "./partials/font";
+@import "./partials/reset";
+@import "./partials/variable";
+@import "./partials/mixins";
+
+body {
+  background-color: #f4f0fe;
+  font-family: "Montserrat";
+  font-weight: normal;
+}

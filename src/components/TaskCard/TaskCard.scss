@@ -1,0 +1,99 @@
+.taskcard {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    color: #000;
+    font-weight: 500;
+  }
+
+  &__checkcontainer {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+
+    & > input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    & > input:checked ~ .taskcard__checkcontainer__checkmark {
+      background-color: #47da99;
+      animation: pop 0.5s;
+      animation-direction: alternate;
+    }
+
+    & > input:checked ~ .taskcard__checkcontainer__checkmark:after {
+      display: block;
+    }
+
+    &__checkmark {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 1.3rem;
+      width: 1.3rem;
+      background-color: #ccc;
+      transition: all 0.3s;
+      border-radius: 5px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 0.45rem;
+        top: 0.25rem;
+        width: 0.35rem;
+        height: 0.6rem;
+        border: solid white;
+        border-width: 0 0.15rem 0.15rem 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.9);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3px;
+
+    &__timeWrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #ab94ff;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.appbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5f33e1;
+  z-index: 999;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  &__backBtn {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+  }
+
+  @media (min-width: 599px) {
+    display: none;
+  }
+}

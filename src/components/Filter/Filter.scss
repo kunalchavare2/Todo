@@ -1,0 +1,31 @@
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+  margin-right: 0;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    white-space: nowrap;
+    background-color: #ede8ff;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #5e34db;
+
+    &.selected {
+      color: white;
+      background-color: #5e34db;
+    }
+  }
+}

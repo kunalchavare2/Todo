@@ -1,0 +1,25 @@
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  width: 100%;
+  border-bottom:1px solid #8d99ae;
+
+    &__label {
+        color: #8d99ae;
+        font-weight: 600;
+        &::first-letter {
+        text-transform: capitalize;
+        }
+    }
+
+  &__value {
+    color: black;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,105 @@
+.navigation {
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px;
+  background-color: #eee9ff;
+  border-radius: 10px;
+  margin: 6px;
+
+  &__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border-color: transparent;
+      width: 50%;
+
+      &.active {
+        img {
+          filter: invert(21%) sepia(82%) saturate(3692%) hue-rotate(250deg)
+            brightness(88%) contrast(101%);
+        }
+      }
+
+      span {
+        display: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+  &__addBtn {
+    position: unset;
+  }
+
+  @media (min-width: 599px) {
+    font-size: 2rem;
+    flex-direction: column;
+    border-radius: unset;
+    border-right: 1px solid #adb5bd;
+    margin: 0;
+    width: 180px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    &__item {
+      display: flex;
+      flex: unset;
+      align-items: center;
+      justify-content: flex;
+      order: 2;
+      width: 100%;
+      align-self: stretch;
+
+      &__btn {
+        overflow: hidden;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 10px;
+        font-size: 1.1rem;
+        z-index: 0;
+        padding: 0.3rem;
+
+        &.active {
+          background-color: #5f33e1;
+          border-radius: 10px;
+          color: #fff;
+          img {
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(114deg)
+              brightness(100%) contrast(106%);
+          }
+        }
+        span {
+          display: inline;
+        }
+        img {
+          width: 25px;
+          filter: invert(50%) sepia(8%) saturate(543%) hue-rotate(167deg)
+            brightness(87%) contrast(82%);
+        }
+      }
+    }
+
+    &__item:nth-child(3) {
+      order: 1;
+    }
+
+    &__addBtn {
+      border-radius: 10px;
+      width: 100px;
+    }
+  }
+}

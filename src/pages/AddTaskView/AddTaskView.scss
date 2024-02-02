@@ -1,0 +1,61 @@
+.addtask {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  height: 100%;
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__addbtn {
+      position: fixed;
+      bottom: 3.5rem;
+      left: 0;
+      margin: 1rem;
+      width: calc(100% - 2rem);
+      padding: 0.8rem;
+      background-color: #5f33e1;
+      border-radius: 10px;
+      border: 1px solid #5f33e1;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  @media (min-width: 599px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 500px;
+    background-color: white;
+    margin-top: 0;
+    height: 100%;
+
+    &__form {
+      &__addbtn {
+        position: absolute;
+        width: 100%;
+        left: unset;
+        right: 0;
+        margin: unset;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.addtaskWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  z-index: 99;
+}
